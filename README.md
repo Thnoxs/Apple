@@ -23,7 +23,7 @@
 
 ### Demo Screeshots
 
-![apple Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+![apple Desktop Demo](.video.gif)
 
 ### Prerequisites
 

@@ -23,6 +23,4 @@ The goal was to move away from static, "grid-based" tech backgrounds and create 
 ## 🚀 Quick Start
 Just clone the repo and open `index.html`. No dependencies, no bloat.
 ```bash
-git clone [https://github.com/your-username/aetherflow-m5.git](https://github.com/your-username/aetherflow-m5.git)
-cd aetherflow-m5
-open index.html
+git clone https://github.com/Thnoxs/Apple.git

@@ -1,26 +1,56 @@
-#  AetherFlow M5 — Kinetic Energy Visualizer
+<div align="center">
+  
+  ![GitHub repo size](https://img.shields.io/github/repo-size/thnoxs/apple)
+  ![GitHub stars](https://img.shields.io/github/stars/thnoxs/apple?style=social)
+  ![GitHub forks](https://img.shields.io/github/forks/thnoxs/apple?style=social)
+[![Twitter Follow](https://img.shields.io/twitter/follow/thnoxs_?style=social)](https://twitter.com/intent/follow?screen_name=thnoxs_)
+  [![YouTube Video Views](https://img.shields.io/youtube/views/ECC-7Ogn_rw?style=social)](https://youtu.be/ECC-7Ogn_rw)
 
-A cinematic, high-performance web experience featuring the **Apple M5 chip** interacting with an organic circuit environment. Built with a focus on fluid motion, hardware-accelerated SVG animations, and premium industrial design aesthetics.
+  <br />
+  <br />
+  
+  <img src="./readme-images/project-logo.png" />
 
+  <h2 align="center">apple - Admin apple</h2>
 
+  This apple is fully responsive for all devices, <br/> Built using HTML, CSS, and JavaScript.
 
-## ⚡ The Vision
-The goal was to move away from static, "grid-based" tech backgrounds and create something that feels **alive**. `AetherFlow` simulates the intake of raw data/energy from terminal nodes, funneling them into the M5 core through organic, curved traces.
+  <a href="https://thnoxs.github.io/apple/"><strong>➥ Live Demo</strong></a>
 
-## 🛠 Tech Stack
-- **HTML5 / CSS3**: Custom keyframe animations and filter effects.
-- **SVG Graphics**: Quadratic Bezier curves for smooth, non-linear circuit paths.
-- **Vanilla JavaScript**: Real-time 3D perspective handling (Tilt-on-hover).
-- **Hardware Acceleration**: Optimized via `will-change` properties for 60FPS performance.
+</div>
 
-## ✨ Key Features
-* **Inward Kinetic Flow**: Energy pulses travel from outer terminal nodes into the chip core.
-* **Power Breathing**: The M5 chip dynamically scales and glows in sync with incoming data pulses.
-* **Metallic Shine Sweep**: A diagonal light ray periodically sweeps across the chip's surface.
-* **Organic Pathing**: Circuit lines use `Quadratic Bezier` curves instead of rigid 90° angles.
-* **Responsive 3D Tilt**: Interactive depth effect that reacts to user cursor movement.
+<br />
 
-## 🚀 Quick Start
-Just clone the repo and open `index.html`. No dependencies, no bloat.
+### Demo Screeshots
+
+![apple Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+
+### Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+
+### Run Locally
+
+To run **apple** locally, run this command on your git bash:
+
+Linux and macOS:
+
 ```bash
-git clone https://github.com/Thnoxs/Apple.git
+sudo git clone https://github.com/thnoxs/apple.git
+```
+
+Windows:
+
+```bash
+git clone https://github.com/thnoxs/apple.git
+```
+
+### Contact
+
+If you want to contact with me you can reach me at [Twitter](https://www.twitter.com/thnoxs).
+
+### License
+
+This project is **free to use** and does not contains any license.

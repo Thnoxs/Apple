@@ -23,7 +23,7 @@
 
 ### Demo Screeshots
 
-![apple Desktop Demo](.video.gif)
+![apple Desktop Demo](./video.gif "Video")
 
 ### Prerequisites
 

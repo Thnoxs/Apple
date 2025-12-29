@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Apple M5 — Kinetic Energy</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 100%; height: 100vh; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    background: #020202;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  }
+
+  .scene {
+    position: relative; width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* CIRCUIT ANIMATION */
+  .circuit-container {
+    position: absolute; width: 800px; height: 800px;
+    pointer-events: none; z-index: 1;
+  }
+
+  .trace-bg {
+    fill: none; stroke: rgba(255, 255, 255, 0.03); stroke-width: 1;
+  }
+
+  .pulse-line {
+    fill: none; stroke-width: 2; stroke-linecap: round;
+    stroke: url(#lineGradient);
+    stroke-dasharray: 40, 300; /* Short line */
+    stroke-dashoffset: 340;
+    animation: flow-in 2s cubic-bezier(0.2, 0, 0.2, 1) infinite;
+    will-change: stroke-dashoffset;
+  }
+
+  @keyframes flow-in {
+    0% { stroke-dashoffset: 340; opacity: 0; }
+    20% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 0; }
+  }
+
+  /* CHIP CONTAINER */
+  .chip {
+    position: relative; 
+    width: 260px; height: 260px; 
+    border-radius: 42px;
+    background: #0d0d0d;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 10;
+    border: 1px solid rgba(255,255,255,0.1);
+    overflow: hidden; /* For the shine effect */
+    animation: chip-pulse 2s cubic-bezier(0.2, 0, 0.2, 1) infinite;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+  }
+
+  /* CHIP SHINE EFFECT */
+  .chip::after {
+    content: "";
+    position: absolute;
+    top: -50%; left: -150%;
+    width: 200%; height: 200%;
+    background: linear-gradient(
+      115deg, 
+      transparent 0%, 
+      transparent 40%, 
+      rgba(255, 255, 255, 0.15) 50%, 
+      transparent 60%, 
+      transparent 100%
+    );
+    animation: sweep 2s cubic-bezier(0.2, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes sweep {
+    0% { left: -150%; }
+    100% { left: 50%; }
+  }
+
+  @keyframes chip-pulse {
+    0%, 100% { transform: scale(1); border-color: rgba(255,255,255,0.1); }
+    50% { transform: scale(1.03); border-color: rgba(139, 108, 255, 0.4); }
+  }
+
+  .chip-content {
+    display: flex; flex-direction: column; align-items: center; 
+    z-index: 2;
+  }
+
+  .chip-content i { font-size: 60px; color: #fff; margin-bottom: 5px; }
+  .chip-content span {
+    font-size: 56px; font-weight: 800;
+    background: linear-gradient(180deg, #fff, #555);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    letter-spacing: -2px;
+  }
+
+  .dot { fill: #222; rx: 1; }
+
+</style>
+</head>
+<body>
+
+<div class="scene">
+  <svg class="circuit-container" viewBox="0 0 400 400">
+    <defs>
+      <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#4dd6c9" />
+        <stop offset="100%" stop-color="#8b6cff" />
+      </linearGradient>
+    </defs>
+
+    <g>
+      <path class="trace-bg" d="M200,20 Q200,80 200,135 M80,70 Q150,70 150,140 M320,70 Q250,70 250,140" />
+      <path class="pulse-line" d="M200,20 Q200,80 200,135 M80,70 Q150,70 150,140 M320,70 Q250,70 250,140" />
+      
+      <path class="trace-bg" d="M200,380 Q200,320 200,265 M80,330 Q150,330 150,260 M320,330 Q250,330 250,260" />
+      <path class="pulse-line" d="M200,380 Q200,320 200,265 M80,330 Q150,330 150,260 M320,330 Q250,330 250,260" />
+
+      <path class="trace-bg" d="M20,200 Q80,200 135,200 M380,200 Q320,200 265,200" />
+      <path class="pulse-line" d="M20,200 Q80,200 135,200 M380,200 Q320,200 265,200" />
+    </g>
+
+    <rect class="dot" x="197" y="17" width="6" height="6" />
+    <rect class="dot" x="77" y="67" width="6" height="6" />
+    <rect class="dot" x="317" y="67" width="6" height="6" />
+    <rect class="dot" x="197" y="377" width="6" height="6" />
+    <rect class="dot" x="77" y="327" width="6" height="6" />
+    <rect class="dot" x="317" y="327" width="6" height="6" />
+    <rect class="dot" x="17" y="197" width="6" height="6" />
+    <rect class="dot" x="377" y="197" width="6" height="6" />
+  </svg>
+
+  <div class="chip">
+    <div class="chip-content">
+      <i class="fa-brands fa-apple"></i>
+      <span>M5</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
